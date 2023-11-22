@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website Design for Educating Sustainability </title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="https://kit.fontawesome.com/711d7cc608.js" crossorigin="anonymous"></script>
+<body>
+    <section class="Header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT</a></li> 
+                    <li><a href="Course.html">COURSE</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Contactus .html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="text-box">
+        <h1>World's biggest University</h1>
+        <p></p>
+        <a href="" id="hero-btn" class="hero-btn">Visit us to know more</a>
+    </div>
+
+    </section>
+
+    <!-- COURSE -->
+    <section class="COURSE"> 
+        <h1>Courses we offer</h1>
+        <p></p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate </h3>
+                <p></p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p></p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p></p>
+            </div> 
+        </div>
+
+    </section>
+
+    <!-- campus -->
+
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>
+        </p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/london.png">
+                <div class="layer">
+                    <h3>
+                        LONDON
+                    </h3>
+                </div>
+            </div>
+        
+       
+            <div class="campus-col">
+                <img src="images/newyork.png">
+                <div class="layer">
+                    <h3>
+                        NEW YORK
+                    </h3>
+                </div>
+            </div>
+        
+    
+            <div class="campus-col">
+                <img src="images/washington.png">
+                <div class="layer">
+                    <h3>
+                        WASHINGTON
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- facility  -->
+    <section class="facilities">
+        <h1>Our facilities</h1>
+        <p></p>
+
+        <div class="row">
+            <div class="facilities-col">
+                 <img src="images/library.png">
+                 <h3>World class Library</h3>
+                 <p></p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/basketball.png">
+                <h3>Largest Play Ground</h3>
+                <p></p>
+           </div>
+            <div class="facilities-col">
+                 <img src="images/cafeteria.png">
+                 <h3>Tasty and Healthy Food</h3>
+                 <p></p>
+            </div>
+        </div>
+    </section>
+
+   <!-- testinomials  -->
+    <section class="testinomials">
+    <h1>What Our Students Say</h1>
+    <p></p>
+
+    <div class="row" id="testimonials-container">
+        <!-- Testimonials will be dynamically added here -->
+    </div>
+    </section>
+
+    <!-- Call to Action  -->
+    <section class="cta">
+        <h1>Enroll for our various online Courses <br>Anywhere from the world</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- Footer  -->
+    <section class="footer">
+        <h4>About us</h4>
+        <p></p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Eduford</p>
+    </section>
+    <script src="https://kit.fontawesome.com/711d7cc608.js" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling effect for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollLinks = document.querySelectorAll('a[href^="#"]');
+            
+            for (const scrollLink of scrollLinks) {
+                scrollLink.addEventListener('click', smoothScroll);
+            }
+            
+            function smoothScroll(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    </script>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Testimonial data
+            var testimonialsData = [
+                {
+                    name: 'Christian Berkley',
+                    image: 'images/user1.jpg',
+                    rating: 4,
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                {
+                    name: 'David Byer',
+                    image: 'images/user2.jpg',
+                    rating: 5,
+                    text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+                }
+                // Add more testimonials as needed
+            ];
+    
+            // Function to create a testimonial element
+            function createTestimonialElement(testimonial) {
+                var testimonialElement = document.createElement('div');
+                testimonialElement.className = 'testinomials-col';
+    
+                var imageElement = document.createElement('img');
+                imageElement.src = testimonial.image;
+    
+                var contentElement = document.createElement('div');
+                contentElement.className = 'content';
+    
+                var nameElement = document.createElement('h3');
+                nameElement.textContent = testimonial.name;
+    
+                var ratingElement = document.createElement('div');
+                ratingElement.className = 'rating';
+                for (var i = 0; i < testimonial.rating; i++) {
+                    var starElement = document.createElement('i');
+                    starElement.className = 'fa-solid fa-star';
+                    ratingElement.appendChild(starElement);
+                }
+    
+                var textElement = document.createElement('p');
+                textElement.textContent = testimonial.text;
+    
+                contentElement.appendChild(nameElement);
+                contentElement.appendChild(ratingElement);
+                contentElement.appendChild(textElement);
+    
+                testimonialElement.appendChild(imageElement);
+                testimonialElement.appendChild(contentElement);
+    
+                return testimonialElement;
+            }
+    
+            // Function to populate testimonials
+            function populateTestimonials() {
+                var testimonialsContainer = document.getElementById('testimonials-container');
+    
+                testimonialsData.forEach(function (testimonial) {
+                    var testimonialElement = createTestimonialElement(testimonial);
+                    testimonialsContainer.appendChild(testimonialElement);
+                });
+            }
+    
+            // Call the function to populate testimonials
+            populateTestimonials();
+        });
+    </script>
+    
+    <script>
+        // Get the button element by its ID
+        var heroBtn = document.getElementById('hero-btn');
+    
+        // Add a click event listener to the button
+        heroBtn.addEventListener('click', function() {
+            // Toggle the 'active' class on the button
+            this.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+</html>
